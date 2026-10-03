@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IHIMI产品商品卡</title>
+    <link rel="stylesheet" href="./styles.css?v=20261003112238" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">IHIMI 产品商品卡</p>
+        <h1>IHIMI产品商品卡</h1>
+      </div>
+      <div class="header-actions">
+        <button id="downloadCardBtn" class="primary-button" type="button">下载当前商品卡</button>
+        <span id="downloadStatus" class="download-status" aria-live="polite"></span>
+      </div>
+    </header>
+    <div id="directLinkBar" class="direct-link-bar" hidden>
+      <div>
+        <strong>手机版永久链接</strong>
+        <span>复制后可发给主播或同事，手机和电脑都能打开。</span>
+      </div>
+      <div class="direct-link-actions">
+        <input id="directLinkInput" type="text" readonly />
+        <button id="copyDirectLinkBtn" type="button">复制</button>
+      </div>
+      <p id="directLinkStatus"></p>
+    </div>
+
+    <main class="layout">
+      <aside class="sidebar" aria-label="商品列表">
+        <div class="search-bar">
+          <input id="searchInput" type="search" placeholder="搜索商品编码 / 名称 / 品类" />
+        </div>
+        <div id="filterRow" class="filter-row"></div>
+        <div id="productList" class="product-list"></div>
+      </aside>
+
+      <section class="workspace">
+        <div class="toolbar">
+          <div>
+            <p class="section-label">当前商品</p>
+            <h2 id="currentName">-</h2>
+          </div>
+          <div class="toolbar-meta" id="currentMeta"></div>
+        </div>
+
+        <article id="cardPreview" class="product-card" aria-label="商品卡预览"></article>
+      </section>
+    </main>
+
+    <script src="./app.bundle.js?v=20261003112238"></script>
+  </body>
+</html>
